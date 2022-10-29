@@ -22,12 +22,12 @@ class CategoryFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->word,
-        'status' => $this->faker->word,
-        'queue' => $this->faker->randomDigitNotNull,
-        'parent_id' => $this->faker->word,
-        'created_at' => $this->faker->date('Y-m-d H:i:s'),
-        'updated_at' => $this->faker->date('Y-m-d H:i:s')
+            'name' => $this->faker->word(),
+            'status' => $this->faker->boolean(),
+            'queue' => $this->faker->randomDigitNotNull,
+            'parent_id' => null,
+            'created_at' => $this->faker->date('Y-m-d H:i:s'),
+            'updated_at' => $this->faker->date('Y-m-d H:i:s')
         ];
     }
 }
